@@ -1,0 +1,32 @@
+{
+  "name": "shb-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "shb-cli": "bin/index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shb190802/shb-cli.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shb190802/shb-cli/issues"
+  },
+  "homepage": "https://github.com/shb190802/shb-cli#readme",
+  
+  "devDependencies": {
+    "chalk": "^2.4.2",
+    "commander": "^4.0.0",
+    "download-git-repo": "^3.0.2",
+    "fs-extra": "^8.1.0",
+    "inquirer": "^7.0.0",
+    "ora": "^4.0.2"
+  }
+}
