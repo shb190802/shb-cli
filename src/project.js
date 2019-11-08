@@ -80,7 +80,7 @@ class Project{
         fse.copySync(path.join(tempPath,file),path.join(projectPath,file))
         console.log(chalk.green(`创建${file}成功！`))
       });
-      fse.remove(tempPath)
+      fse.removeSync(tempPath)
 
       process.chdir(projectPath)
       console.log()
