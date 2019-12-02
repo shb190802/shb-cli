@@ -80,11 +80,13 @@ class Project{
         fse.copySync(path.join(tempPath,file),path.join(projectPath,file))
         console.log(chalk.green(`创建${file}成功！`))
       });
+      const removeTempSpinner = ora('正在删除临时目录。。。')
+      removeTempSpinner.start()
       fse.removeSync(tempPath)
+      removeTempSpinner.succeed('删除成功!')
 
-      process.chdir(projectPath)
-      console.log()
       console.log(chalk.green(`cd ${projectName}`))
+      await doExec(`cd ${projectName}`)
       if(await doExec('git init') && await doExec('npm install')){
         console.log(chalk.green('项目构建成功！'))
         process.exit()
